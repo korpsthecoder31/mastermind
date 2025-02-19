@@ -15,6 +15,8 @@ module Mastermind
     end
 
     def play_game
-      puts "Game start"
+      @choices = @chooser.pick_colors(@choices, @color_choices)
+      p @choices
     end
   end
+end
