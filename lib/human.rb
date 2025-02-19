@@ -8,5 +8,22 @@ module Mastermind
       super
       puts "Human player has been created"
     end
+
+    def guess_colors
+      i = 0
+      guess_arr = []
+      while i < 4
+        puts "Please select four colors:"
+        print "Color No. #{i + 1}: "
+        guess_color = gets.chomp.upcase
+        if @color_choices.include?(guess_color)
+          guess_arr << guess_color
+          i += 1
+        else
+          puts "Invalid color. Try again."
+        end
+      end
+      guess_arr
+    end
   end
 end

@@ -7,16 +7,18 @@ require_relative 'computer'
 module Mastermind
   class Game
     def initialize
-      @color_choices = ["red", "blue", "yellow", "green", "black", "white"]
       @choices = []
+      @guesses = []
       @guesser = Human.new
       @chooser = Computer.new
       play_game
     end
 
     def play_game
-      @choices = @chooser.pick_colors(@choices, @color_choices)
+      @choices = @chooser.pick_colors
+      @guesses = @guesser.guess_colors
       p @choices
+      p @guesses
     end
   end
 end
