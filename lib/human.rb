@@ -12,8 +12,8 @@ module Mastermind
     def guess_colors
       i = 0
       guess_arr = []
+      puts "Please select four colors:"
       while i < 4
-        puts "Please select four colors:"
         print "Color No. #{i + 1}: "
         guess_color = gets.chomp.upcase
         if @color_choices.include?(guess_color)
