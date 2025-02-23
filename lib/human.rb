@@ -15,7 +15,7 @@ module Mastermind
       puts "Please select four colors:"
       while i < 4
         print "Color No. #{i + 1}: "
-        guess_color = gets.chomp.upcase
+        guess_color = gets.chomp.upcase.strip
         if @color_choices.include?(guess_color)
           guess_arr << guess_color
           i += 1
